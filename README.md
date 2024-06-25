@@ -6,7 +6,13 @@ first in terminal i typed the command " corepack enable " followed by this comma
 
 then i cloned my repository FEVERTOKENS-TECH-TEST where i created my next-project under the name " coincatalog " where i ran the commands " " pnpm install " for the dependencies and " pnpm run build "
 
+
+
+
 ###########################################################################TASK 2 : ALGORITHMICS ########################################################################################
+
+
+
 Python :
 
 
@@ -62,6 +68,12 @@ C :
     return 0;
 
 }
+
+
+
+
+
+
 ##############################################################################TASK 3 : LOGIC ############################################################################################
 
 
