@@ -1,6 +1,5 @@
 "use client ";
 import Image from "next/image";
-import Search from "../../assets/svg/search";
 
 const styles = {
   navLink: `text-white flex mx-[10px]`,
@@ -30,17 +29,12 @@ const Header = () => {
             <div className={styles.navLink}>Cryptocurrencies</div>
             <div className={styles.badge} />
           </div>
-
-          <div className={styles.navItem}>
-            <div className={styles.navLink}>Cryptown</div>
-            <div className={styles.badge} />
-          </div>
         </nav>
 
         <div className="flex items-center">
           <div className={styles.inputContainer}>
             <input
-              className="p-4 flex-auto bg-black rounded-full"
+              className=" p-3 flex-auto bg-black rounded-full"
               placeholder="Search"
             />
           </div>
