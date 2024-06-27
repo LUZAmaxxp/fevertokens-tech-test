@@ -28,7 +28,7 @@ ChartJS.register(
 
 const HistoryChart = () => {
   const { id } = useParams();
-  const { data } = useAxios(`coins/${id}/market_chart?vs_currency=usd&days=1`);
+  const { data } = useAxios(`coins/${id}/market_chart?vs_currency=usd&days=7`);
 
   if (!data) {
     return (
