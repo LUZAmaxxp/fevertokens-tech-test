@@ -8,12 +8,24 @@ importers:
 
   .:
     dependencies:
+      '@syncfusion/ej2-base':
+        specifier: ^26.1.37
+        version: 26.1.37
+      '@syncfusion/ej2-react-charts':
+        specifier: ^26.1.39
+        version: 26.1.39
       '@types/coingecko-api':
         specifier: ^1.0.13
         version: 1.0.13
+      apexcharts:
+        specifier: ^3.49.2
+        version: 3.49.2
       bootstrap:
         specifier: ^5.3.3
         version: 5.3.3(@popperjs/core@2.11.8)
+      chart.js:
+        specifier: ^4.4.3
+        version: 4.4.3
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -26,15 +38,27 @@ importers:
       mini-svg-data-uri:
         specifier: ^1.4.4
         version: 1.4.4
+      moment:
+        specifier: ^2.30.1
+        version: 2.30.1
       next:
         specifier: 14.2.4
         version: 14.2.4(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18
         version: 18.3.1
+      react-apexcharts:
+        specifier: ^1.4.1
+        version: 1.4.1(apexcharts@3.49.2)(react@18.3.1)
+      react-chartjs-2:
+        specifier: ^5.2.0
+        version: 5.2.0(chart.js@4.4.3)(react@18.3.1)
       react-dom:
         specifier: ^18
         version: 18.3.1(react@18.3.1)
+      react-router-dom:
+        specifier: ^6.24.0
+        version: 6.24.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       tailwind-merge:
         specifier: ^2.3.0
         version: 2.3.0
@@ -416,6 +440,9 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
+  '@kurkle/color@0.3.2':
+    resolution: {integrity: sha512-fuscdXJ9G1qb7W8VdHi+IwRqij3lBkosAm4ydQtEmbY58OzHXqQhvlxqEkoz0yssNVn38bcpRWgA9PP+OGoisw==}
+
   '@metamask/detect-provider@1.2.0':
     resolution: {integrity: sha512-ocA76vt+8D0thgXZ7LxFPyqw3H7988qblgzddTDA6B8a/yU0uKV42QR/DhA+Jh11rJjxW0jKvwb5htA6krNZDQ==}
     engines: {node: '>= 10'}
@@ -563,6 +590,61 @@ packages:
 
   '@swc/helpers@0.5.5':
     resolution: {integrity: sha512-KGYxvIOXcceOAbEk4bi/dVLEK9z8sZ0uBB3Il5b1rhfClSpcX0yfRO0KmTkqR2cnQDymwLB+25ZyMzICg/cm/A==}
+
+  '@syncfusion/ej2-base@26.1.37':
+    resolution: {integrity: sha512-aDnABkOg+5Uw9SiORkCas8p+5/U+GWI0lL1czZJAwsJ1OGw3vN1zju6klwTX8prefOEh9/aQ67pmt2yepO00bg==}
+    hasBin: true
+
+  '@syncfusion/ej2-buttons@26.1.35':
+    resolution: {integrity: sha512-NfJHzI5GuAjyttM2QS3rdbG03miOcIZ+pgbiIptBuo0d8oe5k7iOTAGLfN+y084qo6ZvTiNlE07UbqDb6Lko2w==}
+
+  '@syncfusion/ej2-calendars@26.1.38':
+    resolution: {integrity: sha512-cRcbf1Fvrcc5d1MdTxvlO527mftmc+Oussn0e79khNwNC9LZTlHN1rThq+GOXqXkwXqb37rGUiZSAmO5QvRl3g==}
+
+  '@syncfusion/ej2-charts@26.1.39':
+    resolution: {integrity: sha512-BbrwpZK/IA9mHyci5l3ApH5NIVo6oRq0LhD8K+fDuNonEPkoStFp4Q2YECxCV0RH2yFU+gZGcUjelg8UG+gJ+Q==}
+
+  '@syncfusion/ej2-compression@26.1.35':
+    resolution: {integrity: sha512-gTWqnDC3321mLaUE/T1LfdZ+Pu5NhY7Y7GlOX3Q1lqWKqE9BQDaIkZx31TqtmwwCQ35i/ZOFdg0F93Kb3PM8dA==}
+
+  '@syncfusion/ej2-data@26.1.35':
+    resolution: {integrity: sha512-dlg+Ag+7lvU1wrfAtSF1pHABIC7PyD5RsAI5ju1io00z3cxfuoY6ctGamHLx2IYTDdM3q5WaPB13dayTBjuU4g==}
+
+  '@syncfusion/ej2-excel-export@26.1.35':
+    resolution: {integrity: sha512-AlFYEBI97I0zjzGrVlqu18mux7TH6l7bSXNdWbjMf961tMSh/TkqjxkbsIWdUjqKz5M/6Vy7ElsnkjDGN1emIA==}
+
+  '@syncfusion/ej2-file-utils@26.1.35':
+    resolution: {integrity: sha512-0aeFbfs1kL/UV/LV+jFeuY/63dN0N4z5xU7mhD+7W4wFyXH9S60rfgE/UawC+UFJAT7H+TrGdOGQ3ZfacQTEmQ==}
+
+  '@syncfusion/ej2-icons@26.1.35':
+    resolution: {integrity: sha512-rhaJDhN+vDBai+7xSw+xMnzAvLtG75vYoWvVA7wgUawA4boA4ODtkEgNYbMPJOEbtYaEQO7s3b7nzzWbXI3v+Q==}
+
+  '@syncfusion/ej2-inputs@26.1.39':
+    resolution: {integrity: sha512-lXtKfFc9qlE8SoDODeXPY5Oo25xLkFpbvGbOVHkohlWFyorU7OPuduW/Tu+tEcvYHUOu59r9Jrb1/OU9CmsL5Q==}
+
+  '@syncfusion/ej2-lists@26.1.35':
+    resolution: {integrity: sha512-XVLm+u11+63dpudZVrgrocK/DihYyAq9jTamfKQ1HkAV27gPTyilV+6ywizGmZmSystgMB+0YBKRDjqv85D1+A==}
+
+  '@syncfusion/ej2-navigations@26.1.39':
+    resolution: {integrity: sha512-t5LaC2rxkYtYzgRI4CDxCmfIaEIS3LeDb+2LhpxoyMk3F2Lr/v0wE7yCaic47EdoL4OsPgBBT2pCUjZaWWWGog==}
+
+  '@syncfusion/ej2-pdf-export@26.1.35':
+    resolution: {integrity: sha512-oGUGHR0x5Z/M3w4VXqfx75rZSuqeIzqsas4YCV3r0gFFn2Vj1m9OqTTgoTZaSuF6SFqiq4Jgoivai7LE/16lsw==}
+
+  '@syncfusion/ej2-popups@26.1.38':
+    resolution: {integrity: sha512-XwXrB9EKZghX6xJNel5bDbeB6y/SdBonvLwGVxp2b+CYymdc+T03lQaDYO7FAtU2JlnaICsmx7OvoIIoYY+e3Q==}
+
+  '@syncfusion/ej2-react-base@26.1.35':
+    resolution: {integrity: sha512-TTSvdHLKFtCsuZ+lWrWXpUcz04sH5D+K+j4vuDGm/qZ9kGiQfGZKNkSkfQYHRyrquyU8zadeZzTDsLUZCR7THA==}
+
+  '@syncfusion/ej2-react-charts@26.1.39':
+    resolution: {integrity: sha512-PXnOFlEtRyLZ3YrFlIUtl9xWrkE/mw5jpCA1GhGEjNKhnlq+JPcBvk3MPRpNG1i1gI3AwFWCbU2RzyyhxIKDng==}
+
+  '@syncfusion/ej2-splitbuttons@26.1.35':
+    resolution: {integrity: sha512-c+iUzD+9rvbriglYzQGJRFAijZ0vRHxnsUNo5whSdDoQCjZnE8avuz/6cJpkY/HyGNIzTpDEayQXB4Z+JgMRqw==}
+
+  '@syncfusion/ej2-svg-base@26.1.39':
+    resolution: {integrity: sha512-9HIc+57S1kuozHCQD7f3gZRRCQ3yPywOf1DHJPQG1LH1nOZbUF/0NcDPENHdtwCQoqvdQltFynp6Vv9EN0qbCw==}
 
   '@szmarczak/http-timer@4.0.6':
     resolution: {integrity: sha512-4BAffykYOgO+5nzBWYwE3W90sBgLJoUPRWWcL8wlyiM8IB8ipJz3UMJ9KXQd1RKQXpKp8Tutn80HZtWsu2u76w==}
@@ -1023,6 +1105,9 @@ packages:
   '@xtuc/long@4.2.2':
     resolution: {integrity: sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==}
 
+  '@yr/monotone-cubic-spline@1.0.3':
+    resolution: {integrity: sha512-FQXkOta0XBSUPHndIKON2Y9JeQz5ZeMqLYZVVK93FliNBFm7LNMIZmY6FrMEB9XPcDbE2bekMbZD6kzDkxwYjA==}
+
   JSONStream@1.3.5:
     resolution: {integrity: sha512-E+iruNOY8VV9s4JEbe1aNEm6MiszPRr/UfcHMz0TQh1BXSxHK+ASV1R6W4HpjBhSeS+54PIsAMCBmwD06LLsqQ==}
     hasBin: true
@@ -1107,6 +1192,9 @@ packages:
   anymatch@3.1.3:
     resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
     engines: {node: '>= 8'}
+
+  apexcharts@3.49.2:
+    resolution: {integrity: sha512-vBB8KgwfD9rSObA7s4kY2rU6DeaN67gTR3JN7r32ztgKVf8lKkdFQ6iUhk6oIHrV7W8PoHhr5EwKymn0z5Fz6A==}
 
   arg@4.1.3:
     resolution: {integrity: sha512-58S9QDqG0Xx27YwPSt9fJxivjYl432YCwfDMfZ+71RAqUrZef7LrKQZ3LHLOwCS4FLNBplP533Zx895SeOCHvA==}
@@ -1441,6 +1529,10 @@ packages:
   chalk@4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
     engines: {node: '>=10'}
+
+  chart.js@4.4.3:
+    resolution: {integrity: sha512-qK1gkGSRYcJzqrrzdR6a+I0vQ4/R+SoODXyAjscQ/4mzuNzySaMCd+hyVxitSY1+L2fjPD1Gbn+ibNqRmwQeLw==}
+    engines: {pnpm: '>=8'}
 
   checkpoint-store@1.1.0:
     resolution: {integrity: sha512-J/NdY2WvIx654cc6LWSq/IYFFCUf75fFTgwzFnmbqyORH4MwgiQCgswLLKBGzmsyTI5V7i5bp/So6sMbDWhedg==}
@@ -2967,6 +3059,9 @@ packages:
   mock-fs@4.14.0:
     resolution: {integrity: sha512-qYvlv/exQ4+svI3UOvPUpLDF0OMX5euvUH0Ny4N5QyRyhNdgAgUrVH3iUINSzEPLvx0kbo/Bp28GJKIqvE7URw==}
 
+  moment@2.30.1:
+    resolution: {integrity: sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==}
+
   moralis-v1@1.13.0:
     resolution: {integrity: sha512-goxxaRSZjg8OWctk3ZDMG7GFePrCKoqI0J4Kai6i1GycE2919iGTARGedrdKWOTUdJTotCcunl4I0HgkS4pzNw==}
 
@@ -3423,10 +3518,22 @@ packages:
     resolution: {integrity: sha512-8zGqypfENjCIqGhgXToC8aB2r7YrBX+AQAfIPs/Mlk+BtPTztOvTS01NRW/3Eh60J+a48lt8qsCzirQ6loCVfA==}
     engines: {node: '>= 0.8'}
 
+  react-apexcharts@1.4.1:
+    resolution: {integrity: sha512-G14nVaD64Bnbgy8tYxkjuXEUp/7h30Q0U33xc3AwtGFijJB9nHqOt1a6eG0WBn055RgRg+NwqbKGtqPxy15d0Q==}
+    peerDependencies:
+      apexcharts: ^3.41.0
+      react: '>=0.13'
+
   react-blockies@1.4.1:
     resolution: {integrity: sha512-4N015X5oPNnD3xQPsiqolOFzPZSSWyc5mJhJUZShUCHtiGUxVN+1qsWTcglkHMNySux9hUofaispqcw9QkWP5Q==}
     peerDependencies:
       react: '>=15.0.0'
+
+  react-chartjs-2@5.2.0:
+    resolution: {integrity: sha512-98iN5aguJyVSxp5U3CblRLH67J8gkfyGNbiK3c+l1QI/G4irHMPQw44aEPmjVag+YKTyQ260NcF82GTQ3bdscA==}
+    peerDependencies:
+      chart.js: ^4.1.1
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
 
   react-dom@17.0.2:
     resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
@@ -3853,6 +3960,37 @@ packages:
   supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+
+  svg.draggable.js@2.2.2:
+    resolution: {integrity: sha512-JzNHBc2fLQMzYCZ90KZHN2ohXL0BQJGQimK1kGk6AvSeibuKcIdDX9Kr0dT9+UJ5O8nYA0RB839Lhvk4CY4MZw==}
+    engines: {node: '>= 0.8.0'}
+
+  svg.easing.js@2.0.0:
+    resolution: {integrity: sha512-//ctPdJMGy22YoYGV+3HEfHbm6/69LJUTAqI2/5qBvaNHZ9uUFVC82B0Pl299HzgH13rKrBgi4+XyXXyVWWthA==}
+    engines: {node: '>= 0.8.0'}
+
+  svg.filter.js@2.0.2:
+    resolution: {integrity: sha512-xkGBwU+dKBzqg5PtilaTb0EYPqPfJ9Q6saVldX+5vCRy31P6TlRCP3U9NxH3HEufkKkpNgdTLBJnmhDHeTqAkw==}
+    engines: {node: '>= 0.8.0'}
+
+  svg.js@2.7.1:
+    resolution: {integrity: sha512-ycbxpizEQktk3FYvn/8BH+6/EuWXg7ZpQREJvgacqn46gIddG24tNNe4Son6omdXCnSOaApnpZw6MPCBA1dODA==}
+
+  svg.pathmorphing.js@0.1.3:
+    resolution: {integrity: sha512-49HWI9X4XQR/JG1qXkSDV8xViuTLIWm/B/7YuQELV5KMOPtXjiwH4XPJvr/ghEDibmLQ9Oc22dpWpG0vUDDNww==}
+    engines: {node: '>= 0.8.0'}
+
+  svg.resize.js@1.4.3:
+    resolution: {integrity: sha512-9k5sXJuPKp+mVzXNvxz7U0uC9oVMQrrf7cFsETznzUDDm0x8+77dtZkWdMfRlmbkEEYvUn9btKuZ3n41oNA+uw==}
+    engines: {node: '>= 0.8.0'}
+
+  svg.select.js@2.1.2:
+    resolution: {integrity: sha512-tH6ABEyJsAOVAhwcCjF8mw4crjXSI1aa7j2VQR8ZuJ37H2MBUbyeqYr5nEO7sSN3cy9AR9DUwNg0t/962HlDbQ==}
+    engines: {node: '>= 0.8.0'}
+
+  svg.select.js@3.0.1:
+    resolution: {integrity: sha512-h5IS/hKkuVCbKSieR9uQCj9w+zLHoPh+ce19bBYyqF53g6mnPB8sAtIbe1s9dh2S2fCmYX2xel1Ln3PJBbK4kw==}
+    engines: {node: '>= 0.8.0'}
 
   swarm-js@0.1.42:
     resolution: {integrity: sha512-BV7c/dVlA3R6ya1lMlSSNPLYrntt0LUq4YMgy3iwpCIc6rZnS5W2wUoctarZ5pXlpKtxDDf9hNziEkcfrxdhqQ==}
@@ -5072,6 +5210,8 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
 
+  '@kurkle/color@0.3.2': {}
+
   '@metamask/detect-provider@1.2.0': {}
 
   '@metamask/eth-sig-util@4.0.1':
@@ -5219,6 +5359,100 @@ snapshots:
     dependencies:
       '@swc/counter': 0.1.3
       tslib: 2.6.3
+
+  '@syncfusion/ej2-base@26.1.37':
+    dependencies:
+      '@syncfusion/ej2-icons': 26.1.35
+
+  '@syncfusion/ej2-buttons@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.37
+
+  '@syncfusion/ej2-calendars@26.1.38':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.37
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-inputs': 26.1.39
+      '@syncfusion/ej2-lists': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.38
+
+  '@syncfusion/ej2-charts@26.1.39':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.37
+      '@syncfusion/ej2-calendars': 26.1.38
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-excel-export': 26.1.35
+      '@syncfusion/ej2-navigations': 26.1.39
+      '@syncfusion/ej2-pdf-export': 26.1.35
+      '@syncfusion/ej2-svg-base': 26.1.39
+
+  '@syncfusion/ej2-compression@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-file-utils': 26.1.35
+
+  '@syncfusion/ej2-data@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.37
+
+  '@syncfusion/ej2-excel-export@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.37
+      '@syncfusion/ej2-compression': 26.1.35
+
+  '@syncfusion/ej2-file-utils@26.1.35': {}
+
+  '@syncfusion/ej2-icons@26.1.35': {}
+
+  '@syncfusion/ej2-inputs@26.1.39':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.37
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.38
+      '@syncfusion/ej2-splitbuttons': 26.1.35
+
+  '@syncfusion/ej2-lists@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.37
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.38
+
+  '@syncfusion/ej2-navigations@26.1.39':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.37
+      '@syncfusion/ej2-buttons': 26.1.35
+      '@syncfusion/ej2-data': 26.1.35
+      '@syncfusion/ej2-inputs': 26.1.39
+      '@syncfusion/ej2-lists': 26.1.35
+      '@syncfusion/ej2-popups': 26.1.38
+
+  '@syncfusion/ej2-pdf-export@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-compression': 26.1.35
+
+  '@syncfusion/ej2-popups@26.1.38':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.37
+      '@syncfusion/ej2-buttons': 26.1.35
+
+  '@syncfusion/ej2-react-base@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.37
+
+  '@syncfusion/ej2-react-charts@26.1.39':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.37
+      '@syncfusion/ej2-charts': 26.1.39
+      '@syncfusion/ej2-react-base': 26.1.35
+
+  '@syncfusion/ej2-splitbuttons@26.1.35':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.37
+      '@syncfusion/ej2-popups': 26.1.38
+
+  '@syncfusion/ej2-svg-base@26.1.39':
+    dependencies:
+      '@syncfusion/ej2-base': 26.1.37
 
   '@szmarczak/http-timer@4.0.6':
     dependencies:
@@ -6035,6 +6269,8 @@ snapshots:
 
   '@xtuc/long@4.2.2': {}
 
+  '@yr/monotone-cubic-spline@1.0.3': {}
+
   JSONStream@1.3.5:
     dependencies:
       jsonparse: 1.3.1
@@ -6110,6 +6346,16 @@ snapshots:
     dependencies:
       normalize-path: 3.0.0
       picomatch: 2.3.1
+
+  apexcharts@3.49.2:
+    dependencies:
+      '@yr/monotone-cubic-spline': 1.0.3
+      svg.draggable.js: 2.2.2
+      svg.easing.js: 2.0.0
+      svg.filter.js: 2.0.2
+      svg.pathmorphing.js: 0.1.3
+      svg.resize.js: 1.4.3
+      svg.select.js: 3.0.1
 
   arg@4.1.3: {}
 
@@ -6526,6 +6772,10 @@ snapshots:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
+
+  chart.js@4.4.3:
+    dependencies:
+      '@kurkle/color': 0.3.2
 
   checkpoint-store@1.1.0:
     dependencies:
@@ -7069,7 +7319,7 @@ snapshots:
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.9.0(eslint@8.57.0)
       eslint-plugin-react: 7.34.3(eslint@8.57.0)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.0)
@@ -7093,7 +7343,7 @@ snapshots:
       enhanced-resolve: 5.17.0
       eslint: 8.57.0
       eslint-module-utils: 2.8.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.5
       is-core-module: 2.14.0
@@ -7115,7 +7365,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0):
+  eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0):
     dependencies:
       array-includes: 3.1.8
       array.prototype.findlastindex: 1.2.5
@@ -8436,6 +8686,8 @@ snapshots:
 
   mock-fs@4.14.0: {}
 
+  moment@2.30.1: {}
+
   moralis-v1@1.13.0(bufferutil@4.0.8)(utf-8-validate@5.0.10):
     dependencies:
       '@babel/runtime': 7.16.7
@@ -8917,9 +9169,20 @@ snapshots:
       iconv-lite: 0.4.24
       unpipe: 1.0.0
 
+  react-apexcharts@1.4.1(apexcharts@3.49.2)(react@18.3.1):
+    dependencies:
+      apexcharts: 3.49.2
+      prop-types: 15.8.1
+      react: 18.3.1
+
   react-blockies@1.4.1(react@18.3.1):
     dependencies:
       prop-types: 15.8.1
+      react: 18.3.1
+
+  react-chartjs-2@5.2.0(chart.js@4.4.3)(react@18.3.1):
+    dependencies:
+      chart.js: 4.4.3
       react: 18.3.1
 
   react-dom@17.0.2(react@17.0.2):
@@ -9470,6 +9733,37 @@ snapshots:
       has-flag: 4.0.0
 
   supports-preserve-symlinks-flag@1.0.0: {}
+
+  svg.draggable.js@2.2.2:
+    dependencies:
+      svg.js: 2.7.1
+
+  svg.easing.js@2.0.0:
+    dependencies:
+      svg.js: 2.7.1
+
+  svg.filter.js@2.0.2:
+    dependencies:
+      svg.js: 2.7.1
+
+  svg.js@2.7.1: {}
+
+  svg.pathmorphing.js@0.1.3:
+    dependencies:
+      svg.js: 2.7.1
+
+  svg.resize.js@1.4.3:
+    dependencies:
+      svg.js: 2.7.1
+      svg.select.js: 2.1.2
+
+  svg.select.js@2.1.2:
+    dependencies:
+      svg.js: 2.7.1
+
+  svg.select.js@3.0.1:
+    dependencies:
+      svg.js: 2.7.1
 
   swarm-js@0.1.42(bufferutil@4.0.8)(utf-8-validate@5.0.10):
     dependencies:

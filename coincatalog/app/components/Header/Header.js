@@ -1,10 +1,11 @@
-"use client ";
+"use client";
 import Image from "next/image";
+import Link from "next/link";
 
 const styles = {
-  navLink: `text-white flex mx-[10px]`,
-  badge: `rounded-full bg-blue-600 h-1 w-1 absolute bottom-5 right-0 top-1 ring-4`,
-  navItem: `relative mr-1 cursor-pointer hover:opacity-60`,
+  navLink: `text-white flex mx-[140px]`,
+  badge: `rounded-full bg-blue-600 h-1 w-1 absolute bottom-5 left-45 right-14 top-1 ring-4`,
+  navItem: `relative mr-1 justify-between cursor-pointer hover:opacity-60`,
   nav: `flex justify-center items-center gap-[20px]`,
   header: `bg-[#17171A] text-white h-20 flex gap-[100px] w-full p-[30px]`,
   headerWrapper: `flex justify-center h-full max-w-screen-xl mx-auto px-4`,
@@ -17,7 +18,7 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <Image
-        alt=""
+        alt="CoinMarketCap"
         src="https://s2.coinmarketcap.com/static/cloud/img/coinmarketcap_white_1.svg"
         width={220}
         height={220}
@@ -26,17 +27,16 @@ const Header = () => {
       <div className={styles.headerWrapper}>
         <nav className={styles.nav}>
           <div className={styles.navItem}>
-            <div className={styles.navLink}>Cryptocurrencies</div>
+            <Link href="../../" className={styles.navLink}>
+              Cryptocurrencies
+            </Link>
             <div className={styles.badge} />
           </div>
         </nav>
 
         <div className="flex items-center">
           <div className={styles.inputContainer}>
-            <input
-              className=" p-3 flex-auto bg-black rounded-full"
-              placeholder="Search"
-            />
+            <input className={styles.input} placeholder="Search" />
           </div>
         </div>
       </div>
