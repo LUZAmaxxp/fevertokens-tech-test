@@ -1,8 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Chart from "../../css/Chart";
 import useAxios from "../../Hooks/useAxios";
 import { useNavigate } from "react-router-dom";
 
