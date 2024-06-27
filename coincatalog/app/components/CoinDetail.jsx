@@ -18,13 +18,15 @@ const CoinDetail = () => {
   }
 
   return (
-    <div className="my-6">
-      <div className="flex gap-2 items-center">
+    <div className="mt-11 ml-11 mr-11">
+      <div className="flex gap-2  mb-6">
         <img src={data.image.small} alt={data.name} />
-        <h1 className="text-2xl mb-2 capitalize font-bold">{data.name}</h1>
+        <h1 className="text-2xl capitalize font-bold font-sans flex items-center ">
+          {data.name}
+        </h1>
       </div>
       <p
-        className="mt-6 text-gray-500 [&>a]:text-blue-600 [&>a]:underline"
+        className=" text-black font-sans "
         dangerouslySetInnerHTML={{ __html: data.description.en }}
       ></p>
     </div>

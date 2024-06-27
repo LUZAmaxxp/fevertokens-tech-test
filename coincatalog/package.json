@@ -26,6 +26,7 @@
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
     "react-router-dom": "^6.24.0",
+    "react-spinners": "^0.14.1",
     "tailwind-merge": "^2.3.0",
     "web3-provider": "^1.0.0",
     "web3uikit": "^1.0.4"

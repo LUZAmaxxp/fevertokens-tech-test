@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import useAxios from "../Hooks/useAxios";
 import {
@@ -28,15 +29,19 @@ ChartJS.register(
 
 const HistoryChart = () => {
   const { id } = useParams();
-  const { data } = useAxios(`coins/${id}/market_chart?vs_currency=usd&days=7`);
+  const [days, setDays] = useState(7);
+  const { data } = useAxios(
+    `coins/${id}/market_chart?vs_currency=usd&days=${days}`
+  );
 
   if (!data) {
     return (
-      <div className="wrapper-container mt-8">
-        <Skeleton className="h-72 w-full mb-10" />
+      <div className="mx-auto max-w-[90%]">
+        <Skeleton className="h-72  mb-10" />
       </div>
     );
   }
+
   const coinChartData = data.prices.map((value) => ({
     x: value[0],
     y: value[1].toFixed(2),
@@ -44,8 +49,11 @@ const HistoryChart = () => {
 
   const options = {
     responsive: true,
+    height: 700,
+    width: 700,
   };
-  const Data = {
+
+  const chartData = {
     labels: coinChartData.map((value) => moment(value.x).format("MMM DD")),
     datasets: [
       {
@@ -60,7 +68,25 @@ const HistoryChart = () => {
 
   return (
     <div>
-      <Line options={options} data={Data} />
+      <div className="flex justify-center mb-4">
+        <button
+          className={`px-4 py-2 mr-2 rounded-3xl ${
+            days === 7 ? "bg-blue-500 text-white" : "bg-gray-300"
+          }`}
+          onClick={() => setDays(7)}
+        >
+          7 Days
+        </button>
+        <button
+          className={`px-4 py-2 rounded-3xl ${
+            days === 24 ? "bg-blue-500 text-white" : "bg-gray-300"
+          }`}
+          onClick={() => setDays(24)}
+        >
+          24 Days
+        </button>
+      </div>
+      <Line options={options} data={chartData} />
     </div>
   );
 };
