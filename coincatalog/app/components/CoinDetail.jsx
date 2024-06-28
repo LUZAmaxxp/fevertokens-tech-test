@@ -2,11 +2,16 @@ import { useParams } from "react-router-dom";
 import useAxios from "../Hooks/useAxios";
 import Skeleton from "./Skeleton";
 
-const CoinDetail = () => {
+const CoinDetail = ({ setError }) => {
   const { id } = useParams();
-  const { data } = useAxios(
+  const { data, error } = useAxios(
     `coins/${id}?localization=false&tickers=false&market_data=true&community_data=false&sparkline=false`
   );
+
+  if (error) {
+    setError(true);
+    return null;
+  }
 
   if (!data) {
     return (

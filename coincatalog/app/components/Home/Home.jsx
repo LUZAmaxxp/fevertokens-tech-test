@@ -9,7 +9,8 @@ import { ClipLoader } from "react-spinners";
 export default function Home() {
   const navigate = useNavigate();
   const [page, setPage] = useState(1);
-  const coinsPerPage = 50;
+  const [coinsPerPage, setCoinsPerPage] = useState(50);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const formatPercent = (number) => `${number}%`;
   const formatDollar = (number, maximumSignificantDigits) =>
@@ -38,17 +39,80 @@ export default function Home() {
 
   const renderPageNumbers = () => {
     const pageNumbers = [];
-    for (let i = 1; i <= totalPages; i++) {
-      pageNumbers.push(
-        <button
-          key={i}
-          onClick={() => setPage(i)}
-          className={`btn ${i === page ? "btn-primary" : "btn-secondary"} mx-1`}
-        >
-          {i}
-        </button>
-      );
+    const ellipsis = (
+      <span key="ellipsis" className="mx-1">
+        ...
+      </span>
+    );
+    const maxVisiblePages = 5;
+
+    if (totalPages <= 10) {
+      for (let i = 1; i <= totalPages; i++) {
+        pageNumbers.push(
+          <button
+            key={i}
+            onClick={() => setPage(i)}
+            className={`btn ${
+              i === page ? "btn-primary" : "btn-secondary"
+            } mx-1`}
+          >
+            {i}
+          </button>
+        );
+      }
+    } else {
+      const startPage = Math.max(1, page - Math.floor(maxVisiblePages / 2));
+      const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+      if (startPage > 1) {
+        pageNumbers.push(
+          <button
+            key={1}
+            onClick={() => setPage(1)}
+            className={`btn ${
+              1 === page ? "btn-primary" : "btn-secondary"
+            } mx-1`}
+          >
+            1
+          </button>
+        );
+        if (startPage > 2) {
+          pageNumbers.push(ellipsis);
+        }
+      }
+
+      for (let i = startPage; i <= endPage; i++) {
+        pageNumbers.push(
+          <button
+            key={i}
+            onClick={() => setPage(i)}
+            className={`btn ${
+              i === page ? "btn-primary" : "btn-secondary"
+            } mx-1`}
+          >
+            {i}
+          </button>
+        );
+      }
+
+      if (endPage < totalPages) {
+        if (endPage < totalPages - 1) {
+          pageNumbers.push(ellipsis);
+        }
+        pageNumbers.push(
+          <button
+            key={totalPages}
+            onClick={() => setPage(totalPages)}
+            className={`btn ${
+              totalPages === page ? "btn-primary" : "btn-secondary"
+            } mx-1`}
+          >
+            {totalPages}
+          </button>
+        );
+      }
     }
+
     return pageNumbers;
   };
 
@@ -58,6 +122,36 @@ export default function Home() {
     } catch (error) {
       console.error("Error navigating to coin details:", error);
     }
+  };
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value.toLowerCase());
+  };
+
+  const filteredData = data
+    ? data.filter(
+        (coin) =>
+          coin.name.toLowerCase().includes(searchTerm) ||
+          coin.symbol.toLowerCase().includes(searchTerm)
+      )
+    : [];
+
+  const selectStyles = {
+    appearance: "none",
+    backgroundColor: "#f0f0f0",
+    border: "1px solid #ccc",
+    borderRadius: "4px",
+    padding: "5px 10px",
+    fontSize: "16px",
+    color: "#333",
+    outline: "none",
+    cursor: "pointer",
+    transition: "border-color 0.3s ease, box-shadow 0.3s ease",
+  };
+
+  const selectFocusStyles = {
+    borderColor: "#007bff",
+    boxShadow: "0 0 5px rgba(0, 123, 255, 0.5)",
   };
 
   return (
@@ -70,17 +164,54 @@ export default function Home() {
       {error && (
         <div className="d-flex flex-column justify-content-center align-items-center min-vh-100">
           <img
-            src="https://i.pinimg.com/564x/b0/de/75/b0de755d2943b5f201c3702fd59f20f8.jpg"
+            src="/wakwak.avif"
             alt="Error illustration"
             style={{ width: "300px", height: "300px" }}
           />
           <p className="font-sans w-fit text-xl font-bold">
-            Sorry..... I'm just a beginner
+            Too Many Requests !
           </p>
         </div>
       )}
       {!loading && !error && data && (
         <div className="mx-auto mt-36 max-w-[90%]">
+          <div className="d-flex justify-content-between mb-3">
+            <div>
+              <label
+                className="mr-2 mt-1 font-semibold font-sans"
+                htmlFor="coinsPerPageSelect"
+              >
+                Coins per page:
+              </label>
+              <select
+                id="coinsPerPageSelect"
+                value={coinsPerPage}
+                onChange={(e) => {
+                  setCoinsPerPage(Number(e.target.value));
+                  setPage(1); // Reset to first page on changing coins per page
+                }}
+                style={selectStyles}
+                onFocus={(e) =>
+                  Object.assign(e.target.style, selectFocusStyles)
+                }
+                onBlur={(e) => Object.assign(e.target.style, selectStyles)}
+              >
+                <option value={20}>20</option>
+                <option value={30}>30</option>
+                <option value={40}>40</option>
+              </select>
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Find Currency"
+                value={searchTerm}
+                onChange={handleSearchChange}
+                className="form-control"
+                style={{ width: "200px" }}
+              />
+            </div>
+          </div>
           <table className="table table-hover cursor-pointer w-full">
             <thead>
               <tr>
@@ -92,7 +223,7 @@ export default function Home() {
               </tr>
             </thead>
             <tbody>
-              {data.map((coin) => (
+              {filteredData.map((coin) => (
                 <tr key={coin.id} onClick={() => handleCoinClick(coin.id)}>
                   <td>
                     {coin.symbol.toUpperCase()}

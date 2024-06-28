@@ -27,17 +27,22 @@ ChartJS.register(
   Legend
 );
 
-const HistoryChart = () => {
+const HistoryChart = ({ setError }) => {
   const { id } = useParams();
   const [days, setDays] = useState(7);
-  const { data } = useAxios(
+  const { data, error } = useAxios(
     `coins/${id}/market_chart?vs_currency=usd&days=${days}`
   );
+
+  if (error) {
+    setError(true);
+    return null;
+  }
 
   if (!data) {
     return (
       <div className="mx-auto max-w-[90%]">
-        <Skeleton className="h-72  mb-10" />
+        <Skeleton className="h-72 mb-10" />
       </div>
     );
   }
