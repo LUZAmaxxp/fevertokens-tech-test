@@ -169,7 +169,7 @@ export default function Home() {
             style={{ width: "300px", height: "300px" }}
           />
           <p className="font-sans w-fit text-xl font-bold">
-            Too Many Requests !
+            Too Many Requests!
           </p>
         </div>
       )}
@@ -215,10 +215,11 @@ export default function Home() {
           <table className="table table-hover cursor-pointer w-full">
             <thead>
               <tr>
-                <th>Rank 🏆 </th>
+                <th>Rank 🏆</th>
                 <th>Symbol</th>
-                <th>24H Change 📈 </th>
-                <th>Price 💵 </th>
+                <th>Full Name</th>
+                <th>24H Change 📈</th>
+                <th>Price 💵</th>
                 <th>Market Cap 💰</th>
                 <th>Last 7 Days 🔥</th>
               </tr>
@@ -236,6 +237,7 @@ export default function Home() {
                       onClick={() => handleCoinClick(coin.id)}
                     />
                   </td>
+                  <td>{coin.name}</td>
                   <td>
                     <span
                       className={

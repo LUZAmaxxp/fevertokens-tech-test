@@ -55,8 +55,7 @@ const HistoryChart = ({ setError }) => {
 
   const options = {
     responsive: true,
-    height: 700,
-    width: 700,
+    maintainAspectRatio: false,
   };
 
   const chartData = {
@@ -73,7 +72,7 @@ const HistoryChart = ({ setError }) => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <div className="flex justify-center mb-4">
         <button
           className={`px-4 py-2 mr-2 rounded-3xl ${
@@ -92,7 +91,9 @@ const HistoryChart = ({ setError }) => {
           24 Days
         </button>
       </div>
-      <Line options={options} data={chartData} />
+      <div className="w-full max-w-screen-md h-[500px]">
+        <Line options={options} data={chartData} />
+      </div>
     </div>
   );
 };
