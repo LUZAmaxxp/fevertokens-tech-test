@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import useAxios from "../Hooks/useAxios";
 import Skeleton from "./Skeleton";
+import Image from "next/image";
 
 const CoinDetail = ({ setError }) => {
   const { id } = useParams();

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const styles = {
   navLink: `text-white flex mx-[90px]  `,

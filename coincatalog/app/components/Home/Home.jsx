@@ -5,6 +5,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import useAxios from "../../Hooks/useAxios";
 import { useNavigate } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
+import dynamic from "next/dynamic";
+
+const DynamicNavigate = dynamic(
+  () => import("react-router-dom").then((mod) => mod.useNavigate),
+  { ssr: false }
+);
 
 export default function Home() {
   const navigate = useNavigate();

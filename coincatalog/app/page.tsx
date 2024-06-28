@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CryptoDetail from "./pages/CryptoDetail";
-function myAPP() {
+
+function MyApp() {
   return (
     <BrowserRouter>
       <Header />
@@ -16,4 +17,4 @@ function myAPP() {
   );
 }
 
-export default myAPP;
+export default MyApp;
