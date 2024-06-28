@@ -31,7 +31,7 @@ Python :
 
 
 
-``` c
+``` C
      #include <stdio.h>
      int main() {
      for (int i = 1; i <= 100; i++) {
@@ -60,7 +60,6 @@ Python :
   }
 
 
-
   printf("\n");
   return 0;
 
@@ -72,7 +71,3 @@ Python :
 ![Screen Shot 2024-06-25 at 12 09 10](https://github.com/LUZAmaxxp/fevertokens-tech-test/assets/140757412/c58a2bb2-757d-4841-b981-f7c3fa23c640)
 
 in this illustration i will explain in my point of view how to find the broken car in the fastest way possible , as the illustratin shows i proposed firstly that the car drive straight we can call the distance drove by the car x . after the car drove the distance x . the driver should go back 2 times the distance x drove by the car so he can travel the same distances . With this method the car should go back and forth with the same distances drove by driver until he finds his friend
-
-```
-
-```
