@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import Link from "next/link";
 
 const styles = {
@@ -17,7 +17,7 @@ const styles = {
 const Header = () => {
   return (
     <div className={styles.header}>
-      <Image
+      <img
         alt="CoinMarketCap"
         src="https://s2.coinmarketcap.com/static/cloud/img/coinmarketcap_white_1.svg"
         width={220}

@@ -9,7 +9,7 @@ import { ClipLoader } from "react-spinners";
 export default function Home() {
   const navigate = useNavigate();
   const [page, setPage] = useState(1);
-  const [coinsPerPage, setCoinsPerPage] = useState(50);
+  const [coinsPerPage, setCoinsPerPage] = useState(100);
   const [searchTerm, setSearchTerm] = useState("");
 
   const formatPercent = (number) => `${number}%`;
@@ -196,9 +196,9 @@ export default function Home() {
                 }
                 onBlur={(e) => Object.assign(e.target.style, selectStyles)}
               >
+                <option value={100}>100</option>
+                <option value={50}>50</option>
                 <option value={20}>20</option>
-                <option value={30}>30</option>
-                <option value={40}>40</option>
               </select>
             </div>
             <div>
@@ -215,6 +215,7 @@ export default function Home() {
           <table className="table table-hover cursor-pointer w-full">
             <thead>
               <tr>
+                <th>Rank</th>
                 <th>Symbol</th>
                 <th>24H Change</th>
                 <th>Price</th>
@@ -225,6 +226,7 @@ export default function Home() {
             <tbody>
               {filteredData.map((coin) => (
                 <tr key={coin.id} onClick={() => handleCoinClick(coin.id)}>
+                  <td>{coin.market_cap_rank}</td>
                   <td>
                     {coin.symbol.toUpperCase()}
                     <img
