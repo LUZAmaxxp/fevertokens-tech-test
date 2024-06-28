@@ -10,7 +10,6 @@ This structured approach not only ensured a streamlined setup of my development 
 
 Python :
 
-```python
              for i in range(1, 101):
                 output = ""
                 if i % 3 == 0:
@@ -22,15 +21,12 @@ Python :
                 if output == "":
                 output = str(i)
                 print(output, end=", ")
-```
 
 
 
 
 
 
-
-  ```C
 
      #include <stdio.h>
      int main() {
@@ -65,9 +61,6 @@ Python :
     return 0;
 
 }
-
-
-```
 
 ##############################################################################TASK 3 : LOGIC ############################################################################################
 

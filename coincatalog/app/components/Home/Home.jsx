@@ -34,7 +34,7 @@ export default function Home() {
     }
   }
 
-  const totalCoins = 1423;
+  const totalCoins = 14855;
   const totalPages = Math.ceil(totalCoins / coinsPerPage);
 
   const renderPageNumbers = () => {
@@ -215,12 +215,12 @@ export default function Home() {
           <table className="table table-hover cursor-pointer w-full">
             <thead>
               <tr>
-                <th>Rank</th>
+                <th>Rank 🏆 </th>
                 <th>Symbol</th>
-                <th>24H Change</th>
-                <th>Price</th>
-                <th>Market Cap</th>
-                <th>Last 7 Days</th>
+                <th>24H Change 📈 </th>
+                <th>Price 💵 </th>
+                <th>Market Cap 💰</th>
+                <th>Last 7 Days 🔥</th>
               </tr>
             </thead>
             <tbody>
