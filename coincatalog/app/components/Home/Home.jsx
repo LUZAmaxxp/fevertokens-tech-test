@@ -188,7 +188,7 @@ export default function Home() {
                 value={coinsPerPage}
                 onChange={(e) => {
                   setCoinsPerPage(Number(e.target.value));
-                  setPage(1); // Reset to first page on changing coins per page
+                  setPage(1);
                 }}
                 style={selectStyles}
                 onFocus={(e) =>
