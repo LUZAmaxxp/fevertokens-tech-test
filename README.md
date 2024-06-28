@@ -22,6 +22,7 @@ Python :
                 if output == "":
                 output = str(i)
                 print(output, end=", ")
+```
 
 
 
@@ -29,7 +30,7 @@ Python :
 
 
 
-
+  ```C
 
      #include <stdio.h>
      int main() {
