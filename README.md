@@ -10,6 +10,7 @@ This structured approach not only ensured a streamlined setup of my development 
 
 Python :
 
+````python
              for i in range(1, 101):
                 output = ""
                 if i % 3 == 0:
@@ -21,6 +22,7 @@ Python :
                 if output == "":
                 output = str(i)
                 print(output, end=", ")
+                ```
 
 
 
@@ -28,39 +30,42 @@ Python :
 
 
 
+
+``` c
      #include <stdio.h>
      int main() {
      for (int i = 1; i <= 100; i++) {
      int printed = 0;
 
-        if (i % 3 == 0) {
-            printf("Hello");
-            printed = 1;
-        }
-        if (i % 5 == 0) {
-            printf("World");
-            printed = 1;
-        }
-        if (i % 7 == 0) {
-            printf("Yoo");
-            printed = 1;
-        }
+      if (i % 3 == 0) {
+          printf("Hello");
+          printed = 1;
+      }
+      if (i % 5 == 0) {
+          printf("World");
+          printed = 1;
+      }
+      if (i % 7 == 0) {
+          printf("Yoo");
+          printed = 1;
+      }
 
-        if (!printed) {
-            printf("%d", i);
-        }
+      if (!printed) {
+          printf("%d", i);
+      }
 
-        if (i < 100) {
-            printf(", ");
-        }
-    }
+      if (i < 100) {
+          printf(", ");
+      }
+  }
 
 
 
-    printf("\n");
-    return 0;
+  printf("\n");
+  return 0;
 
 }
+````
 
 ##############################################################################TASK 3 : LOGIC ############################################################################################
 
