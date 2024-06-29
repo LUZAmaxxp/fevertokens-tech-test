@@ -180,7 +180,7 @@ export default function Home() {
         </div>
       )}
       {!loading && !error && data && (
-        <div className="mx-auto mt-36 max-w-[90%]">
+        <div className="mx-auto mt-24 max-w-[90%]">
           <div className="d-flex justify-content-between mb-3">
             <div>
               <label
